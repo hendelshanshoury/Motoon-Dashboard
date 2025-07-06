@@ -1,0 +1,9 @@
+/* pagination */
+.paginate-btn {
+    @apply flex justify-center font-semibold px-3.5 py-2 rounded transition 
+    bg-white-light text-dark hover:text-white hover:bg-primary dark:text-white-light dark:bg-[#191e3a] dark:hover:bg-primary;
+}
+.paginate-btn-active {
+    @apply flex justify-center font-semibold px-3.5 py-2 rounded transition
+    bg-primary text-white dark:text-white-light dark:bg-primary;
+}
