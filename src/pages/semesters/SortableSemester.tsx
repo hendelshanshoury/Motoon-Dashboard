@@ -4,7 +4,7 @@ import MainBreadcrumbs from '../Elements/MainBreadcrumbs';
 import useSortable from '../../hooks/useSortable';
 
 const SortableSemester = () => {
-    const url = '/api/admin/semesters';
+    const url = '/api/admin/semester-paginate';
     const value = 'name';
     const label = 'description';
     const order = 'order';

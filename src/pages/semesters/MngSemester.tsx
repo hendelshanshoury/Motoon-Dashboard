@@ -33,8 +33,8 @@ const SubmittedCreateForm = Yup.object({
 });
 
 const MngSemester = () => {
-    const createUrl = '/api/admin/semesters';
-    const updateUrl = '/api/admin/semesters';
+    const createUrl = '/api/admin/semester-create';
+    const updateUrl = '/api/admin/semester-update';
     const navigateUrl = '/semesters';
     const { pathname } = useLocation();
     const params = useParams();

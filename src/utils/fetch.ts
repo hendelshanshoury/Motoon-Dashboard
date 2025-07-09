@@ -1,6 +1,7 @@
 import axios from "axios";
 import { toast } from "./Toast";
 import Cookies from "universal-cookie";
+import { log } from "console";
 
 const cookies = new Cookies();
 const token = cookies.get("token");
@@ -47,6 +48,7 @@ export async function postData(url: string, config: any = {}) {
       },
     });
     return { data, status, statusText };
+    
   } catch (err) {
     return handleAxiosErr(err);
   }

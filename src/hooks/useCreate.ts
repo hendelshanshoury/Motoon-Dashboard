@@ -20,7 +20,6 @@ const useCreate = ({ createUrl, navigateUrl, updateUrl, lang }: any) => {
     try {
       const postedData = await postData(createUrl, { ...data, lang });
       console.log(postedData);
-
       if ([200, 201].includes(postedData?.status)) {
         toast.fire({
           icon: "success",

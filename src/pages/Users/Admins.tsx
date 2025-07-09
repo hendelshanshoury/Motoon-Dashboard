@@ -51,7 +51,7 @@ const Admins = () => {
         search,
         page,
         pageSize,
-        type: "super_admin",
+        // type: "super_admin",
       },
       headers: {
         "Accept-Language": lang,
@@ -179,7 +179,7 @@ const Admins = () => {
             className="whitespace-nowrap table-striped "
             records={data?.admins}
             columns={cols}
-            totalRecords={data?.length}
+            totalRecords={data?.meta?.total}
             fetching={isLoading}
             recordsPerPage={pageSize}
             page={page}

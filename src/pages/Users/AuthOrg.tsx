@@ -98,7 +98,7 @@ const AuthOrg = () => {
         <div>
             <DeleteAlert modal={modal} setModal={setModal} deleteCallback={deleteRow} loading={isDelLoading} />
             <div className="panel ">
-                <div className="flex items-center gap-5 ltr:ml-auto rtl:mr-auto mb-3">
+                <div className="flex items-center gap-5 mb-3 ltr:ml-auto rtl:mr-auto">
                     {/* COLUMN SELECTS */}
                     <ColumnSelector isRtl={isRtl} cols={cols} setHideCols={setHideCols} hideCols={hideCols} />
 
@@ -143,7 +143,7 @@ const AddLink = ({ link, title }) => {
                     <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5"></circle>
                     <path d="M15 12L12 12M12 12L9 12M12 12L12 9M12 12L12 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
                 </svg>
-                <span className="ps-2 hidden md:block">إضافة {title}</span>
+                <span className="hidden ps-2 md:block">إضافة {title}</span>
             </button>
         </Link>
     );

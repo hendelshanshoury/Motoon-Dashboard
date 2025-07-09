@@ -44,8 +44,8 @@ const SubmittedUpdateForm = Yup.object({
 });
 
 const MngCourse = () => {
-    const createUrl = '/api/admin/courses';
-    const updateUrl = '/api/admin/courses';
+    const createUrl = '/api/admin/course-create';
+    const updateUrl = '/api/admin/course-update';
     const navigateUrl = '/courses';
     const { pathname } = useLocation();
     const params = useParams();
@@ -175,7 +175,7 @@ const MngCourse = () => {
                                                     label="name"
                                                     value="id"
                                                     isSearchable={false}
-                                                    url="/api/admin/semesters"
+                                                    url="/api/admin/semester-paginate"
                                                 />
                                             )}
                                         </Field>

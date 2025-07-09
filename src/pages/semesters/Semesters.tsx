@@ -17,7 +17,7 @@ const cookie = new Cookies();
 import Tippy from '@tippyjs/react';
 
 export const colsExtend = colsData.filter((col) => col.extended).map((cols) => cols.name);
-const url = '/api/admin/semesters';
+const url = '/api/admin/semester-paginate';
 
 let searchTimeout: any = null;
 const Semesters = () => {
@@ -140,9 +140,9 @@ const Semesters = () => {
                     <DataTable
                         striped
                         className="whitespace-nowrap table-striped "
-                        records={data?.data}
+                        records={data?.semesters}
                         columns={cols}
-                        totalRecords={data?.total}
+                        totalRecords={data?.meta?.total}
                         fetching={isLoading}
                         recordsPerPage={pageSize}
                         page={page}
