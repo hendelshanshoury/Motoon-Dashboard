@@ -65,13 +65,17 @@ const useCreate = ({ createUrl, navigateUrl, updateUrl, lang }: any) => {
       { ...data, lang, _method: "put" }
     );
     console.log("postedData", postedData);
-    if ([200, 201].includes(postedData?.statusText)) {
+    console.log(navigateUrl);
+    console.log(postedData?.data.message);
+    if ([200, 201].includes(postedData?.status)) {
       toast.fire({
         icon: "success",
-        title: postedData?.data.message,
+        title: postedData?.data?.message,
         padding: "10px 20px",
       });
       navigate(navigateUrl);
+    
+      
       setErrors(postedData.data.errors);
     }
     if (postedData?.status === 422) {
@@ -94,7 +98,7 @@ const useCreate = ({ createUrl, navigateUrl, updateUrl, lang }: any) => {
   const updateSettingForm = async (data: any, setErrors: any) => {
     setIsDelLoading(true);
     const postedData = await postData(updateUrl, { ...data, lang });
-    if ([200, 201].includes(postedData?.statusText)) {
+    if ([200, 201].includes(postedData?.status)) {
       toast.fire({
         icon: "success",
         title: postedData?.data.message,
@@ -127,7 +131,7 @@ const useCreate = ({ createUrl, navigateUrl, updateUrl, lang }: any) => {
       updateUrl + `/${data?.id ? data?.id : ""}`,
       { ...data, lang }
     );
-    if ([200, 201].includes(postedData?.statusText)) {
+    if ([200, 201].includes(postedData?.status)) {
       toast.fire({
         icon: "success",
         title: postedData?.data.message,

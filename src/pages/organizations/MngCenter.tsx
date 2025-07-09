@@ -49,10 +49,10 @@ const SubmittedUpdateForm = Yup.object({
 
 const MngCenter = () => {
     const { pathname } = useLocation();
-    const createUrl = '/api/admin/centers';
+    const createUrl = '/api/admin/center-create';
     const navigateUrl = '/centers';
-    const getDataUrl = '/api/admin/centers';
-    const updateUrl = '/api/admin/centers/edit';
+    const getDataUrl = '/api/admin/center-show';
+    const updateUrl = '/api/admin/center-update';
 
     const params = useParams();
 

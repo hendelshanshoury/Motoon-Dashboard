@@ -275,7 +275,7 @@ const Users = () => {
           <DataTable
             striped
             className="whitespace-nowrap table-striped "
-            records={data?.admins}
+            records={data?.users}
             columns={cols}
             totalRecords={data?.meta?.total}
             fetching={isLoading}

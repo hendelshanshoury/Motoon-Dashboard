@@ -97,7 +97,7 @@ const MngCode = () => {
                         ttl="(الجمعية)"
                         label="name"
                         value="id"
-                        url="/api/admin/users/admins"
+                        url="/api/admin/admins"
                         disabled={!isNew}
                       />
                     )}

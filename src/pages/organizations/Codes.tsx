@@ -178,9 +178,9 @@ const Codes = () => {
           <DataTable
             striped
             className="whitespace-nowrap table-striped "
-            records={data?.data}
+            records={data?.codes}
             columns={cols}
-            totalRecords={data?.total}
+            totalRecords={data?.meta?.total}
             fetching={isLoading}
             recordsPerPage={pageSize}
             page={page}
